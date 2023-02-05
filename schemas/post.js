@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'fullname',
+      title: 'Full Name',
       type: 'string',
     }),
     defineField({
@@ -20,29 +20,22 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: 'dob',
+      title: 'Date Of Birth',
+      type: 'date',
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'photo',
+      title: 'Photo',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
+      name: 'occupation',
+      title: 'Occupation',
+      type: 'string',
     }),
     defineField({
       name: 'body',
