@@ -38,8 +38,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
+      name: 'bio',
+      title: 'Bio',
       type: 'blockContent',
     }),
   ],
