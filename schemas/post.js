@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'fullname',
         maxLength: 96,
       },
     }),
@@ -40,19 +40,7 @@ export default defineType({
     defineField({
       name: 'bio',
       title: 'Bio',
-      type: 'blockContent',
+      type: 'string',
     }),
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
 })
